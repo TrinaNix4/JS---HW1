@@ -1,17 +1,17 @@
 // Loops
 // 1. Write a for loop that logs only logs even numbers from 0 - 10; ie 0,2,4,..10
-/* let i = 1
+let i = 1
 for(i=0; i<=10; i++){
   if (i % 2 == 0){
     console.log('The number' + ' ' + i + ' ' + 'is even.')
   }
-} */
+} 
 
 // 2. Write a for that logs numbers from 10 - 0; ie 10,9,8...0
-/* let i = 1; 
+ let i = 1; 
 for(i = 10; i>=0; i--){
   console.log(i) 
-}*/
+}
 // 3. write a for loop that loops through this array and logs 'odd/even' based on wether the number is odd even
 //for loop is used to run a set number of times; loops through until counter reaches a specified number
 //repeats a block of code until a certain condition is met
@@ -28,14 +28,14 @@ for(let i = 1; i <=nums.length; i++){
 
 // 4. write a while loop that starts at 0 and counts up to 10 ie: 0,1,2,3....10
 //a while loop loops through a block of code until the specified condition evaluates to true; variable is declared externally 
-/* let i = 0;
+ let i = 0;
 while (i <= 10){
   console.log(i); 
   i++; 
-}  */
+}  
 // 5. Look closely at the code below
 
-/* const isOdd = (num) =>{
+ const isOdd = (num) =>{
     return num % 2 === 1
 }
 
@@ -43,7 +43,7 @@ if(isOdd(2)){
     console.log('is Odd')
 } else {
     console.log('is Even')
-}   */
+}   
 
 // 6. what will this log? 'is Odd'
 // 7. what is the value of isOdd(2) should be even but it's logging odd  
