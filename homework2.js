@@ -42,7 +42,7 @@ const characters = [
     console.log(c.name)
 })
 console.log('return of forEach') 
-console.log(returnValue) */ //doesn't return anything. returns undefined 
+console.log(returnValue) */  //doesn't return anything. returns undefined 
 
 
 
@@ -284,6 +284,43 @@ console.log('---------------------EVERY 4----------------------')
 //4. Is every character male?
 
 //***SOME***
+// tests whether at least one element in the array passes the test implemented by the provided function
+//returns true if, in the array, it find an element for which the provided function returns true; 
+//otherwise, it returns false.  
+
+let oneMale = characters.some((c)=> {
+
+   return c.gender === 'male'
+})
+
+console.log(oneMale)
+
+console.log('---------------------SOME 1----------------------')
+
+let oneBlueEyes = characters.some((c)=> {
+    return c.eye_color === 'blue'
+ })
+ 
+ console.log(oneBlueEyes)
+ 
+ console.log('---------------------SOME 2----------------------')
+
+ let tallerThan210 = characters.some((c)=> {
+    return c.height > 210
+ })
+ 
+ console.log(tallerThan210)
+ 
+ console.log('---------------------SOME 3----------------------')
+
+ let oneMassUnder50 = characters.some((c)=> {
+
+    return c.mass < 50
+ })
+ 
+ console.log(oneMassUnder50)
+ 
+ console.log('---------------------SOME 4----------------------')
 //1. Is there at least one male character?
 //2. Is there at least one character with blue eyes?
 //3. Is there at least one character taller than 210?
