@@ -160,9 +160,28 @@ let over100 = characters.filter((c)=>{
 return c.mass >= 100 //if true, its going to keep that thing in the new array
 
 })
-console.log('return of filter')
 console.log(over100)
+console.log('---------------------FILTER 1----------------------')
 
+let below200 = characters.filter((c)=>{
+    return c.height < 200
+})
+console.log(below200)
+console.log('---------------------FILTER 2----------------------')
+
+let allMale = characters.filter((c) => {
+    return c.gender === 'male'
+})
+console.log(allMale)
+
+console.log('---------------------FILTER 3----------------------')
+
+let allFemale = characters.filter((c) => {
+    return c.gender === 'female'
+})
+console.log(allFemale)
+
+console.log('---------------------FILTER 4----------------------')
 //not changing original array which is what we want. don't want to change
 //original array 
 
@@ -174,32 +193,55 @@ console.log(over100)
 //***FIND*** */
 //difference between find and filter is that find only finds one match
 //will find only one match - the first one it comes to 
-//the first match it find, it retuns; or undefined if it doesn't find a match 
+//the first match it find, it returns; or undefined if it doesn't find a match 
 
 let firstOver100 = characters.find((c)=>{
     return c.mass >= 100
 })
-console.log('return of find')
 console.log(firstOver100)
-
+console.log('---------------------FIND 1----------------------')
 
 //***SORT***
-
-characters.sort((a,b)=>{  //telling it how to compare A and B by giving it 0 1 or -1
-return a.height - b.height
+characters.sort((a,b) =>{
+    return a.mass - b.mass
 })
-console.log('return of sort') //sorting by height from tallest to shorter 
+
+console.log(characters)
+console.log('---------------------SORT 1----------------------')
+
+characters.sort((a,b)=>{  //telling it how to compare A and B by giving it 0 1 or -1    
+    return a.height - b.height
+})
+//sorting by height from tallest to shorter 
 console.log(characters)
 
-//for name   
+console.log('---------------------SORT 2----------------------')
 
-if (a.name > b.name) {
+//for name   
+characters.sort((a,b)=>{
+     if(a.name > b.name) {
+    return 1
+}
+    if(a.name < b.name) {
     return -1
 }
-if(a.name < b.name) {
-    return 1
-}return 0   //e.g. 'aab' > 'aac' alphabetically 
+return 0   //e.g. 'aab' > 'aac' alphabetically 
+})
 
+console.log(characters)
+console.log('---------------------SORT 3----------------------')
+
+characters.sort((a,b) => {
+    //compare a and b; give 1 if male and -1 if female
+    if(a.gender === 'male' && b.gender === 'male'){
+        return 1
+    }
+    if(a.gender === 'male' && b.gender === 'female'){
+        return -1
+    }
+})
+console.log(characters)
+console.log('---------------------SORT 4----------------------')
 //1. Sort by mass
 //2. Sort by height
 //3. Sort by name
