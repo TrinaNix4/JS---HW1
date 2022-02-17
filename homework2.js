@@ -38,11 +38,11 @@ const characters = [
 //goes through each things and performs function
 //returns undefined 
 
-let returnValue = characters.forEach((c) => {
+/* let returnValue = characters.forEach((c) => {
     console.log(c.name)
 })
 console.log('return of forEach') 
-console.log(returnValue) //doesn't return anything. returns undefined 
+console.log(returnValue) */ //doesn't return anything. returns undefined 
 
 
 
@@ -54,8 +54,34 @@ console.log(returnValue) //doesn't return anything. returns undefined
 let returnValueMap = characters.map((c) =>{
     return c.name
 })
-console.log('return of map')
 console.log(returnValueMap)
+
+console.log('------------------MAP 1-------------------------')
+
+let returnValueMap2 = characters.map((c) => {
+    return c.height
+    
+})
+console.log(returnValueMap2)
+
+console.log('---------------------MAP 2----------------------')
+
+let returnValueMap3 = characters.map((c) => {
+    return {name: c.name, height: c.height}
+})
+console.log(returnValueMap3)
+
+console.log('---------------------MAP 3----------------------')
+
+let returnValueMap4 = characters.map((c) => {
+
+    return {name: c.name.split(' ')[0]}
+})
+console.log(returnValueMap4)
+
+
+console.log('---------------------MAP 4----------------------')
+
 
 //1. Get array of all names
 //2. Get array of all heights
@@ -68,17 +94,55 @@ console.log(returnValueMap)
 //FUNCTION, AND THE CURRENT ITEM 
 //ONCE THIS IS DONE, IT RETURNS THE FINAL RETURN OF FUNCTION (ACCUMULATOR
  //CAUSE RETURNING A VALUE)
-let nums = [2, 3, 4, 5, 6]
-let sum = nums.reduce((accum, num) =>{
-    console.log('accum', accum)
-    console.log('num' , num)
-return accum + num
+//
+let sum = characters.reduce((accum, c) => {
+//console.log(accum)
+//console.log(c.mass)
+
+    return accum + c.mass
 
 },0)
 console.log(sum)
 
 
+console.log('---------------------REDUCE 1----------------------')
 
+let sum2 = characters.reduce((accum, charHeight) => {
+return accum + charHeight.height
+
+},0)
+console.log(sum2)
+
+console.log('---------------------REDUCE 2----------------------')
+
+let sumOfAllEyeColors = characters.reduce((accum, c) => {
+    if(c.eye_color === 'brown'){
+        accum.brown +=1
+        return accum
+    }
+    else if(c.eye_color === 'blue'){
+        accum.blue +=1
+        return accum
+    }
+    else if(c.eye_color === 'yellow'){
+        accum.yellow +=1
+        return accum
+    }
+}, {brown:0, blue:0, yellow:0})
+console.log(sumOfAllEyeColors)
+
+console.log('---------------------REDUCE 3----------------------')
+
+
+let sumChars = characters.reduce((accum, c)=>{
+
+   let numOfChars = c.name.length -1  //length - 1 is the length of the array -1 because first index starts at 0
+    return accum + numOfChars
+}, 0) //initialize; set to 0 
+
+console.log(sumChars)
+
+console.log('---------------------REDUCE 4----------------------')
 
 //1. Get total mass of all characters
 //2. Get total height of all characters

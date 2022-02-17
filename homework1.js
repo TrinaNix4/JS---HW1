@@ -90,7 +90,7 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 3~~~~~~~~~~~~~~~~~
 //put string into an array. go through each item in array and 
 // 
 
-const myString = 'php';
+const myString = 'igloo';
 let vowelCount = 0; 
 
 const numberOfVowels = (string)=> {
@@ -116,6 +116,12 @@ console.log(result)
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
+//
+const mathOperator = () =>{
+
+  // DO STUFF
+}
+mathOperator(); 
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 5~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 5. Write a function that takes an array of strings and a string and returns true or false if the string is in the array.
