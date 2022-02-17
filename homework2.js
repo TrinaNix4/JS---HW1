@@ -248,6 +248,36 @@ console.log('---------------------SORT 4----------------------')
 //4. Sort by gender
 
 //***EVERY***
+//tests whether all elements in the array pass the test implemented by the function
+//returns a boolean value
+let blueEyes = characters.every((c) => {
+
+    return c.eye_color === 'blue' 
+})
+console.log(blueEyes)
+
+console.log('---------------------EVERY 1----------------------')
+
+let massOver40 = characters.every((c) => {
+    return c.mass > 40
+
+})
+console.log(massOver40)
+console.log('---------------------EVERY 2----------------------')
+
+let shorterThan200 = characters.every((c) => {
+    return c.height < 200
+})
+console.log(shorterThan200)
+
+console.log('---------------------EVERY 3----------------------')
+
+let everyMale = characters.every((c) => {
+    return c.gender === 'male'
+})
+console.log(everyMale)
+
+console.log('---------------------EVERY 4----------------------')
 //1. Does every character have blue eyes?
 //2. Does every character have mass more than 40?
 //3. Is every character shorter than 200?
