@@ -1,41 +1,111 @@
-// Loops
-// 1. Write a for loop that logs only logs even numbers from 0 - 10; ie 0,2,4,..10
-// 2. Write a for that logs numbers from 10 - 0; ie 10,9,8...0
-// 3. write a for loop that loops through this array and logs 'odd/even' based on wether the number is odd even
+let array = [1,2,3,4]
 
-let nums = [1,2,3,4,5,6,7,8,9,10]
-
-// 4. write a while loop that starts at 0 and counts up to 10 ie: 0,1,2,3....10
-// 5. Look closely at the code below
-
-const isOdd = (num) =>{
-    return num % 2 === 0
+// this function doesn't return anything
+// it takes an array and changes that array
+// this know side effect/mutation
+// change the value a variable
+const swap = (array)=>{
+  // take first item move to last
+  let firstItem = array[0]
+  let lastItem = array[array.length-1]
+  array[array.length-1] = firstItem
+  // take last item move it to first
+  array[0] = lastItem
 }
 
-if(isOdd(2)){
-    console.log('is Odd')
-} else {
-    console.log('is Even')
+console.log('array before swap:', array)
+swap(array)
+console.log('array after swap:', array)
+
+// Mutation/side effect
+
+// Many times mutations are bad and we dont want to change the value
+// of a given variable
+// does not have a side
+const swap1 = (arr)=>{
+    // copy array
+    const cloneArr = [...arr]
+    swap(cloneArr)
+    return cloneArr
 }
 
-// 6. what will this log?
-// 7. what is the value of isOdd(2) 
-// 8. Fix the isOdd function to make this work
+let nums =[2,3,4,5]
+let swapedNums = swap1(nums)
+console.log('nums: ', nums)
+console.log('swapedNums:', swapedNums)
 
-// Functions
-// 1. Write a function that takes a positive number and prints all even numbers from 0 – number
-
-
-
-
+console.log('------------------------')
 
 // 2. Write a function that takes an array and returns the sum of all the numbers
-// 3. Write a function that returns the number of vowels in string
-// 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
-// 5. Write a function that takes an array of strings and a string and returns true or false if the string is in the array.
-// 6. write a function that takes a person object {firstname: 'joe', lastname: 'shmoe', age: 50} and returns a formatted string "joe shmoe is 50 years old"
-// 7. write a function that takes an array that removes the first and last items and return that new array
-// 8. write a function that swaps the last and first items of an array 
-// 9. write a function that takes a array and a second argument and returns the index in the array of the second argument
-// 10. write a function that takes a number and uses a ternary to return if the number is odd or even.
-// 11. Write a function that prints all  numbers from 0 – 10
+
+// [1,2,3,4] => 10
+// [1,2,3] => 6
+
+// function decleration
+// function getSum(nums){
+//     console.log('here')
+// }
+
+// arrow function
+const getSum = (nums) => {
+  let sum = 0
+  for(var i = 0; i < nums.length; i++){
+    sum += nums[i]
+  }
+  return sum
+};
+
+let sum1 = getSum([1,2,3,4]) // 10
+let sum2 =getSum([1,2,3]) // 6
+
+// console.log(sum1)
+// console.log(sum2)
+
+// DO this again but with a forEach loop
+// iterate over an array and do stuff
+
+// forEach loop - that goes through every item in array and performs a function
+// you pass it the function to perform
+
+
+// (thing)=>{
+    // do stuff here
+// }
+let sum = 0
+// creating an array 'object' behind scenes
+let numbers = [1,2,3,4]
+console.log(numbers) //[1,2,3,4]
+// expecting numbers to be an array of numbers
+// this numbers parameter is scoped to the function
+// overriding the variable
+function getSum1(numbers){
+    // console.log('here')
+    // console.log(numbers)
+    numbers.forEach((number)=>{
+        sum += number
+    })
+    return sum
+}
+
+let s1 = getSum1([1,2,3,4])
+let s2 = getSum1(numbers)
+console.log(s1 )
+console.log(s1 + s2)
+
+console.log('------------------------')
+
+//voting example 
+
+const aboutPerson = (person)=>{
+  let felonyAbout;
+  if(person.hasFelony){
+      felonyAbout= 'has felony'
+  } else{
+      felonyAbout= 'does not have felony'
+  }
+  return `${person.name} is ${person.age} years old and ${felonyAbout}`
+}
+console.log('----- before aboutPerson')
+let aboutSally = aboutPerson(sally)
+console.log(aboutSally)
+console.log('----- after aboutPerson')
