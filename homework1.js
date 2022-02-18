@@ -90,11 +90,12 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 3~~~~~~~~~~~~~~~~~
 //put string into an array. go through each item in array and 
 // 
 
-const myString = 'igloo';
+const myString = 'the fish is swimming';
 let vowelCount = 0; 
 
 const numberOfVowels = (string)=> {
-  const myArray = string.split('');  //splits the string into an array
+  const myArray = string.split('');
+    //splits the string into an array
   vowelArray = ['a','e','i','o','u'];  //telling my function what are vowels 
   myArray.forEach((letter)=>{
    
@@ -117,11 +118,20 @@ console.log(result)
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
 //
-const mathOperator = () =>{
 
-  // DO STUFF
+let operator = '/'
+let firstNum = 567
+let secNum = 7567
+const mathOperator = (operatorStr, num1, num2) =>{
+
+      let var1 = `${num1} ${operatorStr} ${num2}`
+      let numVar = eval(var1)
+return numVar
+
 }
-mathOperator(); 
+//mathOperator(operator, firstNum, secNum); //this can be deleted because this will be called but live and die there
+let result4 = mathOperator(operator, firstNum, secNum)
+console.log(result4)
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 5~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 5. Write a function that takes an array of strings and a string and returns true or false if the string is in the array.
@@ -129,6 +139,15 @@ console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 5~~~~~~~~~~~~~~~~~
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 6~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 6. write a function that takes a person object {firstname: 'joe', lastname: 'shmoe', age: 50} and returns a formatted string "joe shmoe is 50 years old"
 
+
+let person = {firstname: 'joe', lastname: 'shmoe', age: 50}
+
+const personObj = (name, lname, perage) =>{
+  
+  
+  
+  return 
+}
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 7~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 7. write a function that takes an array that removes the first and last items and return that new array
 
