@@ -111,14 +111,9 @@ let result = numberOfVowels(myString);
 console.log(result)
 
 
-
-
-
-
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 4~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 4. Write a function that takes a math operator, as a string, ('*','/','+','-') and two numbers and returns the result
 //
-
 let operator = '/'
 let firstNum = 567
 let secNum = 7567
@@ -127,30 +122,60 @@ const mathOperator = (operatorStr, num1, num2) =>{
       let var1 = `${num1} ${operatorStr} ${num2}`
       let numVar = eval(var1)
 return numVar
-
 }
-//mathOperator(operator, firstNum, secNum); //this can be deleted because this will be called but live and die there
+//mathOperator(operator, firstNum, secNum); //this can be deleted because this will be called but live and die there so no point in leaving it 
 let result4 = mathOperator(operator, firstNum, secNum)
 console.log(result4)
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 5~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 5. Write a function that takes an array of strings and a string and returns true or false if the string is in the array.
+//go through each index of the array and check if it equals the string passed in 
+
+let str;
+let substring = ['dog', 'bird','cat','hamster'];
+
+str = 'I have a pet dog.'; 
+
+  if (substring.some(v => str.includes(v))) {
+    console.log(`Match using "${str}"`);
+} else {
+    console.log(`No match using "${str}"`);
+}
+str = "i have a pet wolf."
+
+if (substring.some(v => str.includes(v))) {
+  console.log(`Match using "${str}"`);
+} else {
+  console.log(`No match using "${str}"`);
+}
+
+ 
 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 6~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 6. write a function that takes a person object {firstname: 'joe', lastname: 'shmoe', age: 50} and returns a formatted string "joe shmoe is 50 years old"
 
 
 let person = {firstname: 'joe', lastname: 'shmoe', age: 50}
+console.log(person)
+console.log(typeof person)
+console.log('Item: ' + person)
 
-const personObj = (name, lname, perage) =>{
-  
-  
-  
-  return 
+const formattedString = (info) => {
+return `${info.firstname} ${info.lastname} is ${info.age} years old.`
 }
+
+console.log(formattedString(person))
+
+ 
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 7~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 7. write a function that takes an array that removes the first and last items and return that new array
+var output = [1, 2, 3, 4, 5];
 
+function removeItems (output) {
+return output.pop;
+
+
+}
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 8~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 8. write a function that swaps the last and first items of an array 
 
@@ -173,4 +198,13 @@ console.log(array) */
 
 // 9. write a function that takes a array and a second argument and returns the index in the array of the second argument
 // 10. write a function that takes a number and uses a ternary to return if the number is odd or even.
+//ternary is an if/else check 
+const oddOrEven = (num) => {
+  return num % 2 === 0 ? 'even' : ''   //? is true statement; : denotes the false statement
+
+}
+console.log(oddOrEven(17))
+
+
+
 // 11. Write a function that prints all  numbers from 0 – 10
