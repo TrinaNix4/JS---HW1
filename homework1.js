@@ -179,26 +179,38 @@ return output.pop(count);
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 8~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 8. write a function that swaps the last and first items of an array 
 
- /* [a, b, c, d] => [d, b, c, a]
+ //[a, b, c, d] => [d, b, c, a]
  let array = [1, 2, 3, 4]
 
 const swap = (array) => {
-console.log(array) */
+console.log(array) 
 //take first item move to last
- //let firstItem = array[0] //grabbing first item 
-//let lastItem = array[array.length - 1] 
-//array[array.length - 1] = firstItem  *///grabbing last item and setting equal to firstItem
+ let firstItem = array[0] //grabbing first item 
+let lastItem = array[array.length - 1] 
+array[array.length - 1] = firstItem  //grabbing last item and setting equal to firstItem
 //take last item move it to first 
- //array[0] = lastItem
+ array[0] = lastItem
 
-//}
-//console.log('array before swap', array)
-//swap(array)
-//console.log('array after swap' , array) */ */
+}
+console.log('array before swap', array)
+swap(array)
+console.log('array after swap' , array)
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 9~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 
 // 9. write a function that takes a array and a second argument and returns the index in the array of the second argument
+arr = []; 
+
+
+const indexArray = (arr, arg) => {
+
+
+ }
+
 // 10. write a function that takes a number and uses a ternary to return if the number is odd or even.
 //ternary is an if/else check 
+
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 10~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 const oddOrEven = (num) => {
   return num % 2 === 0 ? 'even' : ''   //? is true statement; : denotes the false statement
 
@@ -206,7 +218,7 @@ const oddOrEven = (num) => {
 console.log(oddOrEven(17))
 
 
-
+console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 11~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 11. Write a function that prints all  numbers from 0 – 10
 const printNums = (nums) => {
   for(i = 0; i<=nums; i++){
