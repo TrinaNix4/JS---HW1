@@ -170,9 +170,9 @@ console.log(formattedString(person))
 console.log('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Functions: Question 7~~~~~~~~~~~~~~~~~~~~~~~~~~~')
 // 7. write a function that takes an array that removes the first and last items and return that new array
 var output = [1, 2, 3, 4, 5];
-
+var count = 1; 
 function removeItems (output) {
-return output.pop;
+return output.pop(count);
 
 
 }
@@ -208,3 +208,10 @@ console.log(oddOrEven(17))
 
 
 // 11. Write a function that prints all  numbers from 0 – 10
+const printNums = (nums) => {
+  for(i = 0; i<=nums; i++){
+ console.log(i)
+
+  }
+}
+ printNums(10)
